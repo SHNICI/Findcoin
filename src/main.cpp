@@ -2482,7 +2482,7 @@ bool LoadBlockIndex(bool fAllowNew)
 
         const char* pszTimestamp = "Eastern Ukraine faces uncertainty";
         CTransaction txNew;
-        txNew.nTime = 1415375599;
+		txNew.nTime = 1419126426; //This should equal block.nTime
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 2720847 << CBigNum(5002984) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -2492,12 +2492,12 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1415375599;
+        block.nTime    = 1419126426;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 1415752503;
+        block.nNonce   = 504040;
         if(fTestNet)
         {
-            block.nNonce   = 0;
+            block.nNonce = 35661;
         }
         if (false && (block.GetHash() != hashGenesisBlock)) {
 
@@ -2514,15 +2514,14 @@ bool LoadBlockIndex(bool fAllowNew)
                    }
                }
         }
-        block.print();
-        printf("block.GetHash() == %s\n", block.GetHash().ToString().c_str());
-        printf("block.hashMerkleRoot == %s\n", block.hashMerkleRoot.ToString().c_str());
-        printf("block.nTime = %u \n", block.nTime);
-        printf("block.nNonce = %u \n", block.nNonce);
 
+		printf("block.GetHash() == %s\n", block.GetHash().ToString().c_str());
+		printf("block.hashMerkleRoot == %s\n", block.hashMerkleRoot.ToString().c_str());
+		printf("block.nTime = %u \n", block.nTime);
+		printf("block.nNonce = %u \n", block.nNonce);
         //// debug print
-        assert(block.hashMerkleRoot == uint256("0xbd0933e0985cb0055a0c5ab2519527a8f8ff096b1907992266765400a9e86a53"));
         block.print();
+        assert(block.hashMerkleRoot == uint256("0xf9a04d4e1ee3b21dcc77aa832f98a031d14db2619c99fc593c8791fcb0f377e9"));
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());
 

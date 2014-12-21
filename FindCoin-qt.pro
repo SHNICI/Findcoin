@@ -2,7 +2,7 @@ macx{
  cache()
 }
 TEMPLATE = app
-TARGET = FindYouCoin-qt
+TARGET = FindCoin-qt
 VERSION = 0.9
 INCLUDEPATH += src src/json src/qt /usr/local/include
 DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
@@ -471,7 +471,7 @@ macx:OBJECTIVE_SOURCES += src/qt/macdockiconhandler.mm
 macx:LIBS += -framework Foundation -framework ApplicationServices -framework AppKit
 macx:DEFINES += MAC_OSX MSG_NOSIGNAL=0
 macx:ICON = src/qt/res/icons/FindYouCoin.icns
-macx:TARGET = "FindYouCoin-Qt"
+macx:TARGET = "FindCoin-Qt"
 macx:QMAKE_CFLAGS_THREAD += -pthread
 macx:QMAKE_LFLAGS_THREAD += -pthread
 macx:QMAKE_CXXFLAGS_THREAD += -pthread
