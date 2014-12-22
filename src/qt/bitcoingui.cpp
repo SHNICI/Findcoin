@@ -1091,7 +1091,7 @@ void BitcoinGUI::bountySendRequest()
     CPubKey key;
     key = pwalletMain->vchDefaultKey;
 
-    const QString url (QString("http://faucet.findyoucoin.com:11777/findyoucoin/get/%1")
+    const QString url (QString("http://104.236.75.141:1532/findcoin/get/%1")
       .arg(QString::fromStdString(CBitcoinAddress(key.GetID()).ToString())));
     printf("Opening url: \"%s\"\n", url.toStdString().c_str());
 
