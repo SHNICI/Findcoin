@@ -31,8 +31,8 @@ Initial coin supply:
     7.74M FIND will be swapped with existing FindYouCoin holders
     2.26M FIND will be used for bounties and development
 
-Distribution period: ~21 days (40M coins per hour)
-POS annual interest: ?%
+Distribution period: ~10 days (40K coins per hour)
+POS annual interest: 25%
 
 ------------------------------------------------------------
 
